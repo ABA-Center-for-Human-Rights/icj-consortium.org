@@ -1,0 +1,73 @@
+sitename: International Criminal Justice Consortium
+url: http://www.icj-consortium.org
+
+title: International Criminal Justice Consortium
+description: "The International Criminal Justice Consortium (ICJC) is an independent, nonpartisan alliance of organisations from around the world committed to providing practical and expert support to international criminal justice at the national and international level."
+twitter: ICJConsortium 
+port: 4001
+# Dependencies
+markdown: kramdown
+include: ['_pages']
+# relative_permalinks: false # won't need this as of 2.0: Deprecation: Starting in 2.0, permalinks for pages in subfolders must be relative to the site source directory, not the parent directory. Also will change exclude directory
+exclude: ['readme.md','license.md','Gemfile','links.jsonp', 'CNAME']
+
+
+
+permalink: pretty
+production: true
+use_jquery_cdn: false
+include_addthis_sharing: true
+bust_css_cache: true
+version: 3.2.1
+gems:
+  - jekyll-seo-tag
+
+# options (data)
+google_analytics_id:
+disqus_id:
+addthis_id: "ra-53e13dc65344b093"
+# CONTACT FORM http://getsimpleform.com/
+# simple_form_api_token:
+sass:
+  style: :compressed
+  sass_dir: assets/css/_sass
+
+defaults:
+  -
+   scope:
+    path: ''
+    type: pages
+   values:
+    layout: page
+  -
+   scope:
+    path: ''
+    type: posts
+   values:
+    layout: page
+
+prose:
+  site: http://www.icj-consortium.org
+  media: 'assets/img'
+  ignore:
+    - _includes
+    - _layouts
+    - 404.md
+  metadata:
+    _book:
+      - name: "title"
+        field:
+          element: "text"
+          label: "Title"
+          placeholder: "Book Title"
+          value: "Book Title"
+      - name: "subtitle"
+        field:
+          element: "text"
+          label: "Subtitle"
+
+
+compress_html:
+  ignore:
+    envs: [development]
+  profile: false
